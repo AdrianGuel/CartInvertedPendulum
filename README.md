@@ -5,4 +5,10 @@ Base on https://ctms.engin.umich.edu/CTMS/index.php?example=InvertedPendulum&sec
 https://en.wikipedia.org/wiki/Inverted_pendulum
 
 The model is based on the following diagram
+
 ![image](https://user-images.githubusercontent.com/52336176/177005016-756c2342-584a-48e8-8562-e7e699c73769.png)
+
+Parameters
+
+![image](https://user-images.githubusercontent.com/52336176/177005058-c0b67817-4b28-4124-ba36-1f537371ac70.png)
+
