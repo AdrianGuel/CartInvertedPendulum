@@ -1,0 +1,182 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5556,        174]
+NotebookOptionsPosition[      4914,        152]
+NotebookOutlinePosition[      5252,        167]
+CellTagsIndexPosition[      5209,        164]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Eq2", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"Inertia", "+", 
+       RowBox[{"m", "*", 
+        RowBox[{"(", 
+         RowBox[{"l", "^", "2"}], ")"}]}]}], ")"}], "*", "ddtheta"}], "+", 
+    RowBox[{"m", "*", "l", "*", "ddx", "*", 
+     RowBox[{"Cos", "[", "theta", "]"}]}], "+", 
+    RowBox[{"m", "*", "g", "*", "l", "*", 
+     RowBox[{"Sin", "[", "theta", "]"}]}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Eq1", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"M", "+", "m"}], ")"}], "*", "ddx"}], "+", 
+    RowBox[{"b", "*", "dx"}], "+", 
+    RowBox[{"m", "*", "l", "*", "ddtheta", "*", 
+     RowBox[{"Cos", "[", "theta", "]"}]}], "-", 
+    RowBox[{"m", "*", "l", "*", 
+     RowBox[{"(", 
+      RowBox[{"dtheta", "^", "2"}], ")"}], "*", 
+     RowBox[{"Sin", "[", "theta", "]"}]}], "-", "F"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.865760180523325*^9, 3.8657602356299543`*^9}, {
+  3.8657607353275833`*^9, 3.865760869590289*^9}, {3.8657609058763227`*^9, 
+  3.865760908879714*^9}},ExpressionUUID->"85bac335-3799-4f65-bc18-\
+73a45ef75cd4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullSimplify", "[", 
+  RowBox[{"Solve", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Eq1", "\[Equal]", "0"}], " ", "&&", " ", 
+     RowBox[{"Eq2", "\[Equal]", "0"}]}], ",", 
+    RowBox[{"{", 
+     RowBox[{"ddtheta", ",", "ddx"}], "}"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.865760876019517*^9, 3.8657608979229927`*^9}, {
+  3.8657609661900873`*^9, 
+  3.865760970838463*^9}},ExpressionUUID->"516374f4-2ac9-4648-85da-\
+82c4b726d7b7"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"ddtheta", "\[Rule]", 
+     FractionBox[
+      RowBox[{"l", " ", "m", " ", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"g", " ", 
+          RowBox[{"(", 
+           RowBox[{"m", "+", "M"}], ")"}], " ", 
+          RowBox[{"Sin", "[", "theta", "]"}]}], "+", 
+         RowBox[{
+          RowBox[{"Cos", "[", "theta", "]"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "b"}], " ", "dx"}], "+", "F", "+", 
+            RowBox[{
+             SuperscriptBox["dtheta", "2"], " ", "l", " ", "m", " ", 
+             RowBox[{"Sin", "[", "theta", "]"}]}]}], ")"}]}]}], ")"}]}], 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"(", 
+          RowBox[{"Inertia", "+", 
+           RowBox[{
+            SuperscriptBox["l", "2"], " ", "m"}]}], ")"}]}], " ", 
+        RowBox[{"(", 
+         RowBox[{"m", "+", "M"}], ")"}]}], "+", 
+       RowBox[{
+        SuperscriptBox["l", "2"], " ", 
+        SuperscriptBox["m", "2"], " ", 
+        SuperscriptBox[
+         RowBox[{"Cos", "[", "theta", "]"}], "2"]}]}]]}], ",", 
+    RowBox[{"ddx", "\[Rule]", 
+     FractionBox[
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"b", " ", "dx"}], "-", "F"}], ")"}]}], " ", 
+        RowBox[{"(", 
+         RowBox[{"Inertia", "+", 
+          RowBox[{
+           SuperscriptBox["l", "2"], " ", "m"}]}], ")"}]}], "+", 
+       RowBox[{"l", " ", "m", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           SuperscriptBox["dtheta", "2"], " ", 
+           RowBox[{"(", 
+            RowBox[{"Inertia", "+", 
+             RowBox[{
+              SuperscriptBox["l", "2"], " ", "m"}]}], ")"}]}], "+", 
+          RowBox[{"g", " ", "l", " ", "m", " ", 
+           RowBox[{"Cos", "[", "theta", "]"}]}]}], ")"}], " ", 
+        RowBox[{"Sin", "[", "theta", "]"}]}]}], 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"Inertia", "+", 
+          RowBox[{
+           SuperscriptBox["l", "2"], " ", "m"}]}], ")"}], " ", 
+        RowBox[{"(", 
+         RowBox[{"m", "+", "M"}], ")"}]}], "-", 
+       RowBox[{
+        SuperscriptBox["l", "2"], " ", 
+        SuperscriptBox["m", "2"], " ", 
+        SuperscriptBox[
+         RowBox[{"Cos", "[", "theta", "]"}], "2"]}]}]]}]}], "}"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.865760898644054*^9, 3.8657609136312847`*^9}, 
+   3.865760971964202*^9},ExpressionUUID->"35dfae43-9231-4b0f-bb8b-\
+c659b5e950b5"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.865760732031889*^9, 
+  3.865760732036757*^9}},ExpressionUUID->"6a70f3b6-3401-412a-8c7f-\
+394f901ee6ac"]
+},
+WindowSize->{960, 1023},
+WindowMargins->{{Automatic, 586}, {-74, Automatic}},
+FrontEndVersion->"11.1 for Linux x86 (64-bit) (March 13, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 1133, 30, 59, "Input", "ExpressionUUID" -> \
+"85bac335-3799-4f65-bc18-73a45ef75cd4"],
+Cell[CellGroupData[{
+Cell[1716, 54, 465, 12, 34, "Input", "ExpressionUUID" -> \
+"516374f4-2ac9-4648-85da-82c4b726d7b7"],
+Cell[2184, 68, 2559, 76, 64, "Output", "ExpressionUUID" -> \
+"35dfae43-9231-4b0f-bb8b-c659b5e950b5"]
+}, Open  ]],
+Cell[4758, 147, 152, 3, 32, InheritFromParent, "ExpressionUUID" -> \
+"6a70f3b6-3401-412a-8c7f-394f901ee6ac"]
+}
+]
+*)
+
